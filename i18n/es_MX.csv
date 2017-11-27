@@ -1,0 +1,33 @@
+"My FlipBook","My FlipBook"
+"An error ocurred","An error ocurred"
+"Resource does not exist","El recurso no existe"
+"You're not authorized to access this resoure","No tienes autorización para acceder a este recurso"
+"We can't find products matching the selection.","No podemos encontrar productos que coincidan con la selección."
+See,Mostrar
+Share,Compartir
+"Remove Recipent","Eliminar destinatario"
+Remove,Eliminar
+Name,Nombre
+Email,Email
+"* Required Fields","* Campos requeridos"
+Sender,Remitente
+Message,Mensaje
+Invitee,Invitado
+"Maximum %1 email addresses allowed.","Maximum %1 email addresses allowed."
+"Add Invitee","Añadir invitado"
+"Send Email","Enviar Email"
+Back,Atrás
+"Bienvenido a la  %store_name","Bienvenido a la  %store_name"
+"Bienvenido : ","Bienvenido : "
+Email:,Email:
+Video,Video
+Cerrar,Cerrar
+"FlipBook Config","Configurar FlipBook"
+"Enable Module Config","Habilitar Modulo"
+"Enable Module","Habilitar Modulo"
+"Select Attribute Set from Product","Seleccione Attribute Set del Producto"
+"Select Customer Group to Display B2B Section","Seleccione Grupo de clientes para mostrar la sección B2B"
+"Select email template to share","Seleccionar plantilla de correo electrónico para compartir"
+"Email template chosen based on theme fallback when ""Default"" option is selected.","Email template chosen based on theme fallback when ""Default"" option is selected."
+"Email Cc(*)","Email Cc(*)"
+FlipBook,FlipBook

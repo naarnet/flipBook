@@ -1,0 +1,28 @@
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Bienvenido a la  %store_name" store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"name",
+"var customer.name":"email"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p class="greeting">{{trans "Bienvenido : "}} {{var name}}</p>
+<p>Su amigo {{var name}} le ha compartido un catálogo en .{{trans  store_name=$store.getFrontendName()}} </p>
+<form style="" method="post" action="{{var url}}">
+    <input  type="hidden" name="sender_email" class="share-sender" value="{{var customerEmail}}">
+    <input  type="hidden" name="email" class="share-email" value="{{var email}}">
+    <input  type="hidden" name="productId" class="share-catalog" value="{{var prodId}}">
+    <input  type="hidden" name="sendByEmail" class="share-send" value="1">
+    <input  type="submit" name="button" class="share-button" value="Visualizar">
+</form>
+<ul>
+    <li><strong>{{trans "Email:"}}</strong> {{var email}}</li>
+</ul>
+{{template config_path="design/email/footer_template"}}

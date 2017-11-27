@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="qbo" translate="label" sortOrder="10">
+            <label>FlipBook Config</label>
+        </tab>
+        <section id="flipbook" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>FlipBook Config</label>
+            <tab>qbo</tab>
+            <resource>Qbo_FlipBook::widget</resource>
+            <group id="enableaflipbook" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enable Module Config</label>
+                <field id="enable" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="flipbookconfig" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>FlipBook Config</label>
+                <field id="flipbookattrset" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Attribute Set from Product</label>
+                    <source_model>Magento\Catalog\Model\Product\AttributeSet\Options</source_model>
+                </field>
+                <field id="customergroup" translate="label" type="multiselect" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Customer Group to Display B2B Section</label>
+                    <source_model>Magento\Customer\Model\Customer\Attribute\Source\Group</source_model>
+                </field>
+                <field id="email_template" translate="label comment" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select email template to share</label>
+                    <comment>Email template chosen based on theme fallback when "Default" option is selected.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="senderemailcc" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Cc(*)</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

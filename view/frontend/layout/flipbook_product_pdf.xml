@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="porto_header" remove="true"/>
+        <referenceBlock name="menu" remove="true"/>
+        <referenceBlock name="header.container" remove="true"/>
+        <referenceBlock name="header.links"  remove="true"/>
+        <referenceBlock name="store_language"  remove="true"/>
+        <referenceBlock name="top.search"  remove="true"/>
+        <referenceBlock name="currency"  remove="true"/>
+        <referenceBlock name="custom_block"  remove="true"/>
+        <referenceBlock name="page.top"  remove="true"/>
+        <referenceBlock name="navigation.sections"  remove="true"/>
+        <referenceBlock name="footer_block"  remove="true"/>
+        <referenceContainer name="page.wrapper">
+            <block class="Qbo\FlipBook\Block\Product\Pdf" name="pdf" template="Qbo_FlipBook::multimedia/pdf.phtml" before="-"/>
+        </referenceContainer>
+    </body>
+</page>      

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <menu>
+        <add id="Qbo_FlipBook::configuration" title="FlipBook Configurations" translate="label" module="Qbo_FlipBook" sortOrder="20" parent="Qbo_Base::settings" action="adminhtml/system_config/edit/section/flipbook" resource="Qbo_FlipBook::widget"/>
+        <add id="Qbo_FlipBook::adminhtml_catalog_share" title="Catalog Share" translate="title" module="Qbo_FlipBook" sortOrder="20" parent="Magento_Reports::report_products" action="flipbook/catalog/share" resource="Qbo_FlipBook::catalogshare"/>
+    </menu>
+</config>

@@ -1,0 +1,10 @@
+
+<!--
+Show average rating on grid
+-->
+<div>
+    <h3><span><b><?php echo __('Number of Shared Catalogs:') ?></b></span> <span><?php echo $block->escapeHtml($block->getCountCatalog()) ?></span><h3>
+</div>
+<div id="averageContainer" class="hidden">
+    <h3><span><b><?php echo __('Average Rating (current filter selection):') ?></b></span> <span id="average_rating"></span><h3>
+</div>

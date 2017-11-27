@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_account_navigation">
+            <referenceBlock name="customer-account-navigation-rewards-link" remove="true"/>
+            <referenceBlock name="customer-account-navigation-rewards-referral-link" remove="true"/>
+            <block class="Qbo\FlipBook\Block\Element\FlipBook" name="flipbook">
+                <arguments> 
+                    <argument name="path" xsi:type="string">flipbook/customer/multimedia</argument>
+                    <argument translate="true" name="label" xsi:type="string">FlipBook</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>      
