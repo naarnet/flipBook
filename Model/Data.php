@@ -32,6 +32,7 @@ namespace Qbo\FlipBook\Model;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Psr\Log\LoggerInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Data
 {
@@ -48,6 +49,11 @@ class Data
      * @var Magento\Framework\App\Config\ScopeConfigInterface
      */
     protected $_scopeConfig;
+    
+    /**
+     * @var Magento\Store\Model\StoreManagerInterface
+     */
+    protected $_storeManager;
 
     /**
      * 
@@ -57,11 +63,13 @@ class Data
     public function __construct(
         CollectionFactory $productCollectionFactory,
         LoggerInterface $logger,
-        ScopeConfigInterface $scopeConfig
+        ScopeConfigInterface $scopeConfig,
+        StoreManagerInterface $storeManager    
     ) {
         $this->_productCollectionFactory = $productCollectionFactory;
         $this->_logger = $logger;
         $this->_scopeConfig = $scopeConfig;
+        $this->_storeManager = $storeManager;
     }
     
     /**
@@ -97,7 +105,13 @@ class Data
      */
     public function getPdfUrlById($product)
     {
-        return $product->getData('pdf_url');
+        if ($product->getData('pdf_url')) {
+            $pdfUrl = $product->getData('pdf_url');
+            $currentStore = $this->_storeManager->getStore();
+            $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . $pdfUrl;
+            return $mediaUrl;
+        }
+        return '';
     }
 
 }
